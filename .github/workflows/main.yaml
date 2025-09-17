@@ -1,0 +1,21 @@
+---
+name: CI
+on: [push, pull_request]
+
+jobs:
+  check-generated-parsers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: mv generated.nix generated.nix.old
+      - run: nix develop --command "generate-parsers"
+      - run: diff generated.nix generated.nix.old
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: nix run nixpkgs#nixfmt **/*.nix
+      - run: nix flake check
+      - run: nix build .

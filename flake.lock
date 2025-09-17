@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1759381078,
+        "narHash": "sha256-gTrEEp5gEspIcCOx9PD8kMaF1iEmfBcTbO0Jag2QhQs=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7df7ff7d8e00218376575f0acdcc5d66741351ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nvim-treesitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1759376029,
+        "narHash": "sha256-Cu6Wg9SKJpYAkp8DPAXe4Rf9OSSWW2wNdmCkYtl//fw=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter",
+        "rev": "99bd52ba56a4b7c9a8cc50a6140180755e76fac6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "ref": "main",
+        "repo": "nvim-treesitter",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "nvim-treesitter": "nvim-treesitter"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
