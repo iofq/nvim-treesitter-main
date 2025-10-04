@@ -77,6 +77,10 @@ in
         };
         nvimSkipModules = [ "nvim-treesitter._meta.parsers" ];
       });
+      nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
+        version = inputs.nvim-treesitter-textobjects.rev;
+        src = inputs.nvim-treesitter-textobjects;
+      });
     }
   );
 

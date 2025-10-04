@@ -7,6 +7,10 @@
       url = "github:nvim-treesitter/nvim-treesitter/main";
       flake = false;
     };
+    nvim-treesitter-textobjects = {
+      url = "github:nvim-treesitter/nvim-treesitter-textobjects/main";
+      flake = false;
+    };
   };
 
   outputs =
@@ -55,7 +59,8 @@
           };
         in
         rec {
-          nvim-treesitter = pkgs'.vimPlugins.nvim-treesitter.withAllGrammars;
+          nvim-treesitter-textobjects = pkgs'.vimPlugins.nvim-treesitter-textobjects;
+          nvim-treesitter = pkgs'.vimPlugins.nvim-treesitter;
           default = nvim-treesitter;
         }
       );
