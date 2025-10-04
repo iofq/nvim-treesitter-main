@@ -55,7 +55,7 @@ in
 {
   vimPlugins = prev.vimPlugins.extend (
     final': prev': {
-      nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: rec {
+      nvim-treesitter = prev'.nvim-treesitter.overrideAttrs (old: rec {
         src = inputs.nvim-treesitter;
         name = "${old.pname}-${src.rev}";
         postPatch = "";
@@ -64,7 +64,7 @@ in
           mkdir -p $out/queries
           cp -a $src/runtime/queries/* $out/queries
         ";
-        passthru = (prev.nvim-treesitter.passthru or { }) // {
+        passthru = (prev'.nvim-treesitter.passthru or { }) // {
           inherit
             builtGrammars
             allGrammars
@@ -77,7 +77,7 @@ in
         };
         nvimSkipModules = [ "nvim-treesitter._meta.parsers" ];
       });
-      nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
+      nvim-treesitter-textobjects = prev'.nvim-treesitter-textobjects.overrideAttrs (old: {
         version = inputs.nvim-treesitter-textobjects.rev;
         src = inputs.nvim-treesitter-textobjects;
       });
