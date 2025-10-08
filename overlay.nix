@@ -48,19 +48,31 @@ let
     f:
     let
       grammars = (f (tree-sitter.builtGrammars // builtGrammars));
-      grammarNames = lib.concatStringsSep " " (
-        map (g: builtins.elemAt (builtins.split "-" g.name) 0) grammars
-      );
+
+      # Grammars that are required by a provided grammar
+      required = lib.unique (lib.concatLists (map (g: g.requires or [ ]) grammars));
+
+      # Append grammars from required that exist in builtGrammars (they actually have a parser)
+      # Need to split these out as some "requires" elements from parsers.lua are just queries
+      # from nvim-treesitter/runtime/queries
+      finalGrammars =
+        grammars
+        ++ map (name: builtGrammars.${name}) (
+          builtins.filter (name: builtins.hasAttr name builtGrammars) required
+        );
+
+      runtimeQueries = lib.concatStringsSep " " ((map (g: g.passthru.name) grammars) ++ required);
+
       bundle = pkgs.symlinkJoin {
         name = "nvim-treesitter-bundle";
-        paths = map grammarToPlugin grammars;
+        paths = map grammarToPlugin finalGrammars;
       };
     in
     final.vimPlugins.nvim-treesitter-unwrapped.overrideAttrs (old: {
       postInstall = old.postInstall + ''
         # ensure runtime queries get linked to RTP (:TSInstall does this too)
         mkdir -p $out/queries
-        for grammar in ${grammarNames}; do
+        for grammar in ${runtimeQueries}; do
             ln -sfT $src/runtime/queries/$grammar $out/queries/$grammar
         done
 

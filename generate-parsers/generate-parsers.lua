@@ -1,6 +1,15 @@
+local function table_to_nix(t)
+  local entries = {}
+  for _, s in ipairs(t) do
+    table.insert(entries, string.format('"%s"', s))
+  end
+  return string.format("[ %s ]", table.concat(entries, " "))
+end
+
 local function fmt_grammar(grammar)
   local lines = {
     string.format('%s = buildGrammar {', grammar.language),
+    string.format('passthru.name = "%s";', grammar.language),
     string.format('language = "%s";', grammar.language),
     string.format('version = "%s";', grammar.version),
     string.format('src = %s;', grammar.src),
@@ -8,6 +17,10 @@ local function fmt_grammar(grammar)
   }
   if grammar.generate then table.insert(lines, string.format('generate = %s;', grammar.generate)) end
   if grammar.location then table.insert(lines, string.format('location = "%s";', grammar.location)) end
+  if grammar.requires then table.insert(
+    lines,
+    string.format('requires = %s;', table_to_nix(grammar.requires))
+  ) end
 
   table.insert(lines, "};")
   return table.concat(lines, "\n")
@@ -42,7 +55,9 @@ local function generate_grammars(g)
       if p.install_info.location then
         grammar.location = p.install_info.location
       end
-
+      if p.requires then
+        grammar.requires = p.requires
+      end
       table.insert(output, fmt_grammar(grammar))
     end
   end
