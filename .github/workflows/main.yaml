@@ -3,19 +3,24 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  check-generated-parsers:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
-      - run: mv generated.nix generated.nix.old
-      - run: nix develop --command "generate-parsers"
-      - run: diff generated.nix generated.nix.old
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
-      - run: nix run nixpkgs#nixfmt **/*.nix
+      - uses: DeterminateSystems/flakehub-cache-action@main
       - run: nix flake check
-      - run: nix build .
+      - run: nix run nixpkgs#nixfmt **/*.nix
+
+      # check generate-parsers
+      - run: mv generated.nix generated.nix.old
+      - run: nix develop --command "generate-parsers"
+      - run: diff generated.nix generated.nix.old
+
+      - run: nix build .#nvim-treesitter.withAllGrammars
+      # Ensure bundle is injected into source code
+      - run: grep -R "/nix/store" result/lua
+      # Ensure parsers & queries are linked to rtp
+      - run: |-
+          test -f result/parser/http.so
+          test -d result/queries/http
