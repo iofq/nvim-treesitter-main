@@ -58,7 +58,7 @@ overlays = [
       f: p: {
         nvim-treesitter = p.nvim-treesitter.withAllGrammars; # or withPlugins...
         # also redefine nvim-treesitter-textobjects (any other plugins that depend on nvim-treesitter)
-        nvim-treesitter-textobjects = p.nvim-treesitter-textobjects.override {
+        nvim-treesitter-textobjects = p.nvim-treesitter-textobjects.overrideAttrs {
           dependencies = [ f.nvim-treesitter ];
         };
       }
