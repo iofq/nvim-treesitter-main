@@ -24,6 +24,8 @@ The `nixpkgs` `nvim-treesitter` plugin is not well equipped to handle the migrat
 
 ## Usage
 
+** See below if you also plan to install tree-sitter grammars **
+
 In your flake.nix:
 
 ```nix
@@ -39,6 +41,33 @@ In your flake.nix:
     };
 
 ```
+
+## Parsers (withPlugins, withAllGrammars)
+
+`nvim-treesitter` expects all of the parsers and queries to be installed in a single directory (in a non-nix setting this would be done imperatively via `:TSInstall` into `~/.local`). To pacify it in a nix setting, `withPlugins` and `withAllGrammars` have been extended to bundle all defined parsers into a single path, and patch the nvim-treesitter `config.lua` `install_dir` setting to point directly at the bundle in the nix store.
+
+A few other neovim plugins define `nvim-treesitter` as a dependency, meaning we run the risk of having two separate copies of `nvim-treesitter` presented to Neovim which can cause issues because one copy will not be aware of your installed parsers. To fix, create an overlay like below to redefine `nvim-treesitter` and any dependent plugins in your nixpkgs set.
+
+*If you are not using any other plugins that depend on `nvim-treesitter`, you may skip this step, but it's still recommended.*
+
+```nix
+overlays = [
+  inputs.nvim-treesitter-main.overlays.default
+  (final: prev: {
+    vimPlugins = prev.vimPlugins.extend (
+      f: p: {
+        nvim-treesitter = p.nvim-treesitter.withAllGrammars; # or withPlugins...
+        # also redefine nvim-treesitter-textobjects (any other plugins that depend on nvim-treesitter)
+        nvim-treesitter-textobjects = p.nvim-treesitter-textobjects.override {
+          dependencies = [ f.nvim-treesitter ];
+        };
+      }
+    );
+  })
+];
+```
+
+If you need the unpatched `nvim-treesitter` plugin without any parsers/queries bundled, even after you overlay it, you can use the `nvim-treesitter-unwrapped` output of this overlay.
 
 ## Updating
 
