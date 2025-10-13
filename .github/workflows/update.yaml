@@ -1,0 +1,24 @@
+---
+name: update treesitter grammars
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 0"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/flakehub-cache-action@main
+      - run: nix develop --command "generate-parsers"
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.PAT }}
+          branch: ci/update
+          commit-message: "chore: update generated.nix"
+          title: "chore: update generated.nix"
+          body: "This PR is auto-generated."
