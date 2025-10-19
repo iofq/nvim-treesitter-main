@@ -69,6 +69,24 @@ overlays = [
 
 If you need the unpatched `nvim-treesitter` plugin without any parsers/queries bundled, even after you overlay it, you can use the `nvim-treesitter-unwrapped` output of this overlay.
 
+## Cache
+
+Add our `cachix` repo to avoid needing to build grammars locally.
+
+```nix
+  nix = {
+    settings = {
+      substituters = [
+        "https://nvim-treesitter-main.cachix.org"
+      ];
+      trusted-public-keys = [
+        "nvim-treesitter-main.cachix.org-1:cbwE6blfW5+BkXXyeAXoVSu1gliqPLHo2m98E4hWfZQ="
+      ];
+    };
+  };
+```
+
+
 ## Updating
 
 To update the list of parsers in `generated.nix`:
