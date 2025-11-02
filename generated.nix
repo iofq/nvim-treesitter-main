@@ -573,14 +573,14 @@
   diff = buildGrammar {
     passthru.name = "diff";
     language = "diff";
-    version = "0.0.0+rev=e42b8def4f75633568f1aecfe01817bf15164928";
+    version = "0.0.0+rev=2520c3f934b3179bb540d23e0ef45f75304b5fed";
     src = fetchFromGitHub {
-      owner = "the-mikedavis";
+      owner = "tree-sitter-grammars";
       repo = "tree-sitter-diff";
-      rev = "e42b8def4f75633568f1aecfe01817bf15164928";
-      hash = "sha256-1ibGin1e6+geAQNoV/KLCBOoXYcZo7S5+Q2XgsZPIfU=";
+      rev = "2520c3f934b3179bb540d23e0ef45f75304b5fed";
+      hash = "sha256-8rYLNGgoZSvvfqO2++nAgFKmvbkKJ3m+9B8bTXp6Us4=";
     };
-    meta.homepage = "https://github.com/the-mikedavis/tree-sitter-diff";
+    meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-diff";
   };
   disassembly = buildGrammar {
     passthru.name = "disassembly";
@@ -997,14 +997,14 @@
   gdshader = buildGrammar {
     passthru.name = "gdshader";
     language = "gdshader";
-    version = "0.0.0+rev=14e834063e136fa69b6d91f711f4f1981acf424b";
+    version = "0.0.0+rev=0dab84552f7d33a0084b469b7e38237302bf8e91";
     src = fetchFromGitHub {
-      owner = "GodOfAvacyn";
+      owner = "airblast-dev";
       repo = "tree-sitter-gdshader";
-      rev = "14e834063e136fa69b6d91f711f4f1981acf424b";
-      hash = "sha256-Zs3egdOi4/1TF86cjlR5UZVEaUpXsUh4xL0tR39RSpE=";
+      rev = "0dab84552f7d33a0084b469b7e38237302bf8e91";
+      hash = "sha256-jNDsVAwEMNAomAxG8+atH6RdUwbNrIgcKtS9vRLP7X0=";
     };
-    meta.homepage = "https://github.com/GodOfAvacyn/tree-sitter-gdshader";
+    meta.homepage = "https://github.com/airblast-dev/tree-sitter-gdshader";
   };
   git_config = buildGrammar {
     passthru.name = "git_config";
@@ -1733,12 +1733,12 @@
   julia = buildGrammar {
     passthru.name = "julia";
     language = "julia";
-    version = "0.0.0+rev=a0b436e4a2895596eb9965a9493e18989defa521";
+    version = "0.0.0+rev=5a5d3082e13edd5afc4c274498d6125ecc914870";
     src = fetchFromGitHub {
       owner = "tree-sitter-grammars";
       repo = "tree-sitter-julia";
-      rev = "a0b436e4a2895596eb9965a9493e18989defa521";
-      hash = "sha256-pdF/JI2H2zSsTuSIZFN1EmXqvoLgzOFG9IkhWm5XO3k=";
+      rev = "5a5d3082e13edd5afc4c274498d6125ecc914870";
+      hash = "sha256-4LUgqBlF88l4OlyorNghUVo0XeB9fmrDQtRy0wcAgxA=";
     };
     meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-julia";
   };
@@ -2966,15 +2966,14 @@
   scfg = buildGrammar {
     passthru.name = "scfg";
     language = "scfg";
-    version = "0.0.0+rev=2f3709e7656fa2c443f92041c91a9f843f8cd625";
+    version = "0.0.0+rev=d850fd470445d73de318a21d734d1e09e29b773c";
     src = fetchFromGitHub {
       owner = "rockorager";
       repo = "tree-sitter-scfg";
-      rev = "2f3709e7656fa2c443f92041c91a9f843f8cd625";
-      hash = "sha256-2/n+pSR6Ojahm8iBnpNsQscrXQqzZflKBA42gX29u50=";
+      rev = "d850fd470445d73de318a21d734d1e09e29b773c";
+      hash = "sha256-AnyOcQFA3N6AFZiG7eLS1xCm1qX6hko9lFV4oV9p/E8=";
     };
     meta.homepage = "https://github.com/rockorager/tree-sitter-scfg";
-    generate = true;
   };
   scheme = buildGrammar {
     passthru.name = "scheme";
