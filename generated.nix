@@ -1336,14 +1336,14 @@
   haskell = buildGrammar {
     passthru.name = "haskell";
     language = "haskell";
-    version = "0.0.0+rev=0975ef72fc3c47b530309ca93937d7d143523628";
+    version = "0.0.0+rev=2e51745eed8cd2ec429302b74250189467d665a4";
     src = fetchFromGitHub {
-      owner = "tree-sitter";
+      owner = "tree-sitter-grammars";
       repo = "tree-sitter-haskell";
-      rev = "0975ef72fc3c47b530309ca93937d7d143523628";
-      hash = "sha256-0wmdbXHZbHkv4pTrB1fCbExx9E83l+zaocGa+SvQsZQ=";
+      rev = "2e51745eed8cd2ec429302b74250189467d665a4";
+      hash = "sha256-UZUEXEORGYffgypjdKV4mik0DVNW1JxXNc2xHvw3GS4=";
     };
-    meta.homepage = "https://github.com/tree-sitter/tree-sitter-haskell";
+    meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-haskell";
   };
   haskell_persistent = buildGrammar {
     passthru.name = "haskell_persistent";
@@ -2750,12 +2750,12 @@
   rbs = buildGrammar {
     passthru.name = "rbs";
     language = "rbs";
-    version = "0.0.0+rev=de893b166476205b09e79cd3689f95831269579a";
+    version = "0.0.0+rev=5282e2f36d4109f5315c1d9486b5b0c2044622bb";
     src = fetchFromGitHub {
       owner = "joker1007";
       repo = "tree-sitter-rbs";
-      rev = "de893b166476205b09e79cd3689f95831269579a";
-      hash = "sha256-87Z8XQfuqrWYj9Mc+whVu9o3ZwfjGYylbvxZNYnA3UM=";
+      rev = "5282e2f36d4109f5315c1d9486b5b0c2044622bb";
+      hash = "sha256-GE5cW1Nf7S8u5vAGcBZBzfM7mC7yXVR/Tp7hlhmkelA=";
     };
     meta.homepage = "https://github.com/joker1007/tree-sitter-rbs";
   };
@@ -3174,12 +3174,12 @@
   sql = buildGrammar {
     passthru.name = "sql";
     language = "sql";
-    version = "0.0.0+rev=d98aed3660ef1e9660ec6e359192bd2ab78bd78c";
+    version = "0.0.0+rev=4094309b58ccb74d041fb531ae6b7193a3ebc351";
     src = fetchFromGitHub {
       owner = "derekstride";
       repo = "tree-sitter-sql";
-      rev = "d98aed3660ef1e9660ec6e359192bd2ab78bd78c";
-      hash = "sha256-9noBQppL3pZX3eKHZXM/MnilNAhasltQ/nkLMAMtSHY=";
+      rev = "4094309b58ccb74d041fb531ae6b7193a3ebc351";
+      hash = "sha256-zexq9DOxXZno/dHnb/+FHgl4+ezlHCRVRB1pcdg+H6E=";
     };
     meta.homepage = "https://github.com/derekstride/tree-sitter-sql";
   };
@@ -3357,12 +3357,12 @@
   t32 = buildGrammar {
     passthru.name = "t32";
     language = "t32";
-    version = "0.0.0+rev=2f604ad17a15c09d99648199da7f173eed8250dc";
+    version = "0.0.0+rev=056123923a10e3d537914885cfbacf79cd644e40";
     src = fetchFromGitHub {
       owner = "xasc";
       repo = "tree-sitter-t32";
-      rev = "2f604ad17a15c09d99648199da7f173eed8250dc";
-      hash = "sha256-9J8wy/7qW4vWsIzpDI+lVWr/6158jrod0nSk3ihXUPI=";
+      rev = "056123923a10e3d537914885cfbacf79cd644e40";
+      hash = "sha256-xkYFtVEEV/5y+5ghp+bxHsddjSeqZLhZhdGAhv2SnAU=";
     };
     meta.homepage = "https://github.com/xasc/tree-sitter-t32";
   };
@@ -4000,12 +4000,12 @@
   zsh = buildGrammar {
     passthru.name = "zsh";
     language = "zsh";
-    version = "0.0.0+rev=v0.36.0";
+    version = "0.0.0+rev=v0.42.0";
     src = fetchFromGitHub {
       owner = "georgeharker";
       repo = "tree-sitter-zsh";
-      rev = "v0.36.0";
-      hash = "sha256-XE2zoGjffwoy9Kbfz9Hf0bd00NaT8+eaKsliQK7nYQQ=";
+      rev = "v0.42.0";
+      hash = "sha256-atPMgFt23gmhKorBnMuwmn2eLpWLfE/7dyD05CBg2cc=";
     };
     meta.homepage = "https://github.com/georgeharker/tree-sitter-zsh";
   };
