@@ -79,7 +79,7 @@ let
         # patch nvim-treesitter with parser bundle path
         ln -sfT ${bundle}/parser $out/parser
         substituteInPlace $out/lua/nvim-treesitter/config.lua \
-          --replace-fail "install_dir = vim.fs.joinpath(vim.fn.stdpath('data'), 'site')," \
+          --replace-fail "install_dir = vim.fs.joinpath(vim.fn.stdpath('data') --[[@as string]], 'site')," \
           "install_dir = '$out'"
       '';
     });
