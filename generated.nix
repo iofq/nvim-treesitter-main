@@ -47,12 +47,12 @@
   angular = buildGrammar {
     passthru.name = "angular";
     language = "angular";
-    version = "0.0.0+rev=3bd2036e710f609ea08fcfca5a1eb1169ecc114f";
+    version = "0.0.0+rev=f0d0685701b70883fa2dfe94ee7dc27965cab841";
     src = fetchFromGitHub {
       owner = "dlvandenberg";
       repo = "tree-sitter-angular";
-      rev = "3bd2036e710f609ea08fcfca5a1eb1169ecc114f";
-      hash = "sha256-VdfPZ39AEjvl+9r/LZNRGNIQsiTB9S065AnUc4MeohU=";
+      rev = "f0d0685701b70883fa2dfe94ee7dc27965cab841";
+      hash = "sha256-rCecCdb/Bi90KsMvStNvldDPI73EDevA+QLXTYRwueg=";
     };
     meta.homepage = "https://github.com/dlvandenberg/tree-sitter-angular";
     requires = [
@@ -237,12 +237,12 @@
   bpftrace = buildGrammar {
     passthru.name = "bpftrace";
     language = "bpftrace";
-    version = "0.0.0+rev=0978030fdcdab74d49faaee2a60eb94607a367cc";
+    version = "0.0.0+rev=774f4458ad39691336ead1ee361b22434c4cdec7";
     src = fetchFromGitHub {
       owner = "sgruszka";
       repo = "tree-sitter-bpftrace";
-      rev = "0978030fdcdab74d49faaee2a60eb94607a367cc";
-      hash = "sha256-dM4wuIB1Sg+Fnb7ldx62OOd7w14ewEX0Em27peSeDL0=";
+      rev = "774f4458ad39691336ead1ee361b22434c4cdec7";
+      hash = "sha256-BIPAnkY9QcW+LSR9w1E7gsCAqpOYSBpG/FF7UQYm5XI=";
     };
     meta.homepage = "https://github.com/sgruszka/tree-sitter-bpftrace";
   };
@@ -285,12 +285,12 @@
   c_sharp = buildGrammar {
     passthru.name = "c_sharp";
     language = "c_sharp";
-    version = "0.0.0+rev=f05a2ca99d329de2e6c32f26a21c6169b2bfcbb7";
+    version = "0.0.0+rev=88366631d598ce6595ec655ce1591b315cffb14c";
     src = fetchFromGitHub {
       owner = "tree-sitter";
       repo = "tree-sitter-c-sharp";
-      rev = "f05a2ca99d329de2e6c32f26a21c6169b2bfcbb7";
-      hash = "sha256-pilqIL/c0V24hUKkQcuqUKLGypzL44un8F6+sDM+Ayg=";
+      rev = "88366631d598ce6595ec655ce1591b315cffb14c";
+      hash = "sha256-x2JQKMCyvqJkVuQPfAmoihSaBxgWaTFadkmZOuc58Bc=";
     };
     meta.homepage = "https://github.com/tree-sitter/tree-sitter-c-sharp";
   };
@@ -541,12 +541,12 @@
   desktop = buildGrammar {
     passthru.name = "desktop";
     language = "desktop";
-    version = "0.0.0+rev=27c713cd097f85d3024569adf34e069cade84905";
+    version = "0.0.0+rev=4a99354f8e9bb7270586f6f539130c74e59cafdd";
     src = fetchFromGitHub {
       owner = "ValdezFOmar";
       repo = "tree-sitter-desktop";
-      rev = "27c713cd097f85d3024569adf34e069cade84905";
-      hash = "sha256-PBzf6Bqe874zhp5KI9gjF35J7y11Me+Sgsrt6d+BAq8=";
+      rev = "4a99354f8e9bb7270586f6f539130c74e59cafdd";
+      hash = "sha256-kfqukDxZCtRBTZVFV+FyE8M7ls1Bi5X9o5TUDH8Zg/8=";
     };
     meta.homepage = "https://github.com/ValdezFOmar/tree-sitter-desktop";
   };
@@ -687,12 +687,12 @@
   editorconfig = buildGrammar {
     passthru.name = "editorconfig";
     language = "editorconfig";
-    version = "0.0.0+rev=b58de0ce2c52990c8913e39a8c14ce4a40e29a39";
+    version = "0.0.0+rev=406ab80f7dc4f3aac252ad3d106737a621dde47d";
     src = fetchFromGitHub {
       owner = "ValdezFOmar";
       repo = "tree-sitter-editorconfig";
-      rev = "b58de0ce2c52990c8913e39a8c14ce4a40e29a39";
-      hash = "sha256-c1J9vFJ1c7aJqgJibCT4r8P6SlKtLAQTwDi67zToNxc=";
+      rev = "406ab80f7dc4f3aac252ad3d106737a621dde47d";
+      hash = "sha256-PcDI7m9QsPefyoLKLqvmeyaDemAS5jwldTQSOYBW82Q=";
     };
     meta.homepage = "https://github.com/ValdezFOmar/tree-sitter-editorconfig";
   };
@@ -867,12 +867,12 @@
   fish = buildGrammar {
     passthru.name = "fish";
     language = "fish";
-    version = "0.0.0+rev=aa074a0bacde8b5823c592574d7138f156a95776";
+    version = "0.0.0+rev=5248e7c375183b83f70cc6d8a7b2f5438234d395";
     src = fetchFromGitHub {
       owner = "ram02z";
       repo = "tree-sitter-fish";
-      rev = "aa074a0bacde8b5823c592574d7138f156a95776";
-      hash = "sha256-ZQj6XR7pHGoCOBS6GOHiRW9LWNoNPlwVcZe5F2mtGNE=";
+      rev = "5248e7c375183b83f70cc6d8a7b2f5438234d395";
+      hash = "sha256-QXVpQm4aOaXoYK28jIjBYCX612xosQHk9ez9GfxLYSo=";
     };
     meta.homepage = "https://github.com/ram02z/tree-sitter-fish";
   };
@@ -903,12 +903,12 @@
   fortran = buildGrammar {
     passthru.name = "fortran";
     language = "fortran";
-    version = "0.0.0+rev=32fe27ec32b6a3bc2bc333566e6457f10fc7bbe3";
+    version = "0.0.0+rev=2880b7aab4fb7cc618de1ef3d4c6d93b2396c031";
     src = fetchFromGitHub {
       owner = "stadelmanma";
       repo = "tree-sitter-fortran";
-      rev = "32fe27ec32b6a3bc2bc333566e6457f10fc7bbe3";
-      hash = "sha256-SlbQpkfoIV0EN+nA2m53iojrSK0UilIJ4TO03wqgMw0=";
+      rev = "2880b7aab4fb7cc618de1ef3d4c6d93b2396c031";
+      hash = "sha256-jXSzFAj+pOIHcfEckHxFBojW7axHI9E0If0UgH3j+Z0=";
     };
     meta.homepage = "https://github.com/stadelmanma/tree-sitter-fortran";
   };
@@ -1772,12 +1772,12 @@
   kitty = buildGrammar {
     passthru.name = "kitty";
     language = "kitty";
-    version = "0.0.0+rev=f821c16397ffab5b776d8781245215811438a624";
+    version = "0.0.0+rev=fa6ab3fd32d890a0217495c96b35761e6d2dcb5b";
     src = fetchFromGitHub {
       owner = "OXY2DEV";
       repo = "tree-sitter-kitty";
-      rev = "f821c16397ffab5b776d8781245215811438a624";
-      hash = "sha256-vjfKJng2AkVfnpQsJM86XrbVT3s0JXkwWEqEQS57n0M=";
+      rev = "fa6ab3fd32d890a0217495c96b35761e6d2dcb5b";
+      hash = "sha256-hyzwZfnslyxqL+98BWejCyLwwJMcj6O8EGuBYrCKn4o=";
     };
     meta.homepage = "https://github.com/OXY2DEV/tree-sitter-kitty";
   };
@@ -1796,12 +1796,12 @@
   kotlin = buildGrammar {
     passthru.name = "kotlin";
     language = "kotlin";
-    version = "0.0.0+rev=6b9788578ae23a1bc7c87e8d564e0daf7671dee3";
+    version = "0.0.0+rev=c10ad83a66c76855e006496db3bdb002afc49203";
     src = fetchFromGitHub {
       owner = "fwcd";
       repo = "tree-sitter-kotlin";
-      rev = "6b9788578ae23a1bc7c87e8d564e0daf7671dee3";
-      hash = "sha256-WfFcXtJS5gtpp73as1lrAb4GLn8r5F/PNw4xAIWs+hw=";
+      rev = "c10ad83a66c76855e006496db3bdb002afc49203";
+      hash = "sha256-/+t3b/JBdiEQFPcqgkLl6EkjRYsUY5eHpbK4RFDuXm8=";
     };
     meta.homepage = "https://github.com/fwcd/tree-sitter-kotlin";
   };
@@ -2002,12 +2002,12 @@
   markdown = buildGrammar {
     passthru.name = "markdown";
     language = "markdown";
-    version = "0.0.0+rev=bd2d09ecdbd36289bb7185c8751bbf14c5afe838";
+    version = "0.0.0+rev=cee71b8288f2ec09c29415219ac15a654bd571b9";
     src = fetchFromGitHub {
       owner = "tree-sitter-grammars";
       repo = "tree-sitter-markdown";
-      rev = "bd2d09ecdbd36289bb7185c8751bbf14c5afe838";
-      hash = "sha256-rlw/8L3UmKB3708BDALDBkKxlWrMyWSjplpt60MUoFo=";
+      rev = "cee71b8288f2ec09c29415219ac15a654bd571b9";
+      hash = "sha256-8ZNPVaJoiTh1RSVwMsH8d6zG/asbNvDA2DOqHhKd3k0=";
     };
     meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-markdown";
     location = "tree-sitter-markdown";
@@ -2016,12 +2016,12 @@
   markdown_inline = buildGrammar {
     passthru.name = "markdown_inline";
     language = "markdown_inline";
-    version = "0.0.0+rev=bd2d09ecdbd36289bb7185c8751bbf14c5afe838";
+    version = "0.0.0+rev=cee71b8288f2ec09c29415219ac15a654bd571b9";
     src = fetchFromGitHub {
       owner = "tree-sitter-grammars";
       repo = "tree-sitter-markdown";
-      rev = "bd2d09ecdbd36289bb7185c8751bbf14c5afe838";
-      hash = "sha256-rlw/8L3UmKB3708BDALDBkKxlWrMyWSjplpt60MUoFo=";
+      rev = "cee71b8288f2ec09c29415219ac15a654bd571b9";
+      hash = "sha256-8ZNPVaJoiTh1RSVwMsH8d6zG/asbNvDA2DOqHhKd3k0=";
     };
     meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-markdown";
     location = "tree-sitter-markdown-inline";
@@ -2077,12 +2077,12 @@
   mlir = buildGrammar {
     passthru.name = "mlir";
     language = "mlir";
-    version = "0.0.0+rev=d2ba26eeee7e3fd83a52236e1f143da42145ade7";
+    version = "0.0.0+rev=fe703bcb17ee58a3029df8a35099be1415877633";
     src = fetchFromGitHub {
       owner = "artagnon";
       repo = "tree-sitter-mlir";
-      rev = "d2ba26eeee7e3fd83a52236e1f143da42145ade7";
-      hash = "sha256-kPll9hqe7Jn0XEuQ1ZSJxeF5gnJWu3e2XUwDIpZV04M=";
+      rev = "fe703bcb17ee58a3029df8a35099be1415877633";
+      hash = "sha256-ctw5YO9bEau2VHggMq919omJ2lOZ7rUz7gTFAXm/1VM=";
     };
     meta.homepage = "https://github.com/artagnon/tree-sitter-mlir";
     generate = true;
@@ -2126,12 +2126,12 @@
   nickel = buildGrammar {
     passthru.name = "nickel";
     language = "nickel";
-    version = "0.0.0+rev=a0a5d98a6f0edb5d00a18e62e7d1d02a5607c391";
+    version = "0.0.0+rev=b5b6cc3bc7b9ea19f78fed264190685419cd17a8";
     src = fetchFromGitHub {
       owner = "nickel-lang";
       repo = "tree-sitter-nickel";
-      rev = "a0a5d98a6f0edb5d00a18e62e7d1d02a5607c391";
-      hash = "sha256-2la/9XxL2dN+rzTotgDXQFz9ktDXQ3Og9svX5Din2zo=";
+      rev = "b5b6cc3bc7b9ea19f78fed264190685419cd17a8";
+      hash = "sha256-aPiOtpZJQQmAjCwx2Ssirhe6rqxbrwjxIWK5l3L14EY=";
     };
     meta.homepage = "https://github.com/nickel-lang/tree-sitter-nickel";
   };
@@ -2534,14 +2534,14 @@
   proto = buildGrammar {
     passthru.name = "proto";
     language = "proto";
-    version = "0.0.0+rev=e9f6b43f6844bd2189b50a422d4e2094313f6aa3";
+    version = "0.0.0+rev=213175b7aa595fab7eba7d4eadeb62d9c7e0879e";
     src = fetchFromGitHub {
-      owner = "treywood";
+      owner = "coder3101";
       repo = "tree-sitter-proto";
-      rev = "e9f6b43f6844bd2189b50a422d4e2094313f6aa3";
-      hash = "sha256-Ue6w6HWy+NTJt+AKTFfJIUf3HXHTwkUkDk4UdDMSD+U=";
+      rev = "213175b7aa595fab7eba7d4eadeb62d9c7e0879e";
+      hash = "sha256-LzZJY4Rja4RiVgrp9xRI3hX65jq09ctXhJJM8yLwP7Q=";
     };
-    meta.homepage = "https://github.com/treywood/tree-sitter-proto";
+    meta.homepage = "https://github.com/coder3101/tree-sitter-proto";
   };
   prql = buildGrammar {
     passthru.name = "prql";
@@ -2813,12 +2813,12 @@
   rescript = buildGrammar {
     passthru.name = "rescript";
     language = "rescript";
-    version = "0.0.0+rev=3159c949c15096b02b470bd4025754806fc7a17d";
+    version = "0.0.0+rev=43c2f1f35024918d415dc933d4cc534d6419fedf";
     src = fetchFromGitHub {
       owner = "rescript-lang";
       repo = "tree-sitter-rescript";
-      rev = "3159c949c15096b02b470bd4025754806fc7a17d";
-      hash = "sha256-A1u3CCJw6Rqsr6SLqVjYIr6spd7prLF4AMmA79N+8tQ=";
+      rev = "43c2f1f35024918d415dc933d4cc534d6419fedf";
+      hash = "sha256-QG4LvF/ix7wKHrZ1pUNXzG6ibbITUYAZYb4a39qJF/o=";
     };
     meta.homepage = "https://github.com/rescript-lang/tree-sitter-rescript";
   };
@@ -3165,12 +3165,12 @@
   sql = buildGrammar {
     passthru.name = "sql";
     language = "sql";
-    version = "0.0.0+rev=c686d575d6ee585c404c30dd1cf2a0f42d687460";
+    version = "0.0.0+rev=71f3c41ff9c99505b2bda30361baaefdc3fed2b2";
     src = fetchFromGitHub {
       owner = "derekstride";
       repo = "tree-sitter-sql";
-      rev = "c686d575d6ee585c404c30dd1cf2a0f42d687460";
-      hash = "sha256-fI4Le/4OIxDJrQ0uzJaKMejhDkPY7Ew6DuhJFya8t4k=";
+      rev = "71f3c41ff9c99505b2bda30361baaefdc3fed2b2";
+      hash = "sha256-hDjdXy2zRO4xB20OuOrvF4FusZ2fOJbonhuP1WZcJ4w=";
     };
     meta.homepage = "https://github.com/derekstride/tree-sitter-sql";
   };
@@ -3299,12 +3299,12 @@
   swift = buildGrammar {
     passthru.name = "swift";
     language = "swift";
-    version = "0.0.0+rev=12bacf3ee30f6c39e7cfa6ca6625cac012589236";
+    version = "0.0.0+rev=ae604674719764ce26f18017afa4a98949077075";
     src = fetchFromGitHub {
       owner = "alex-pinkus";
       repo = "tree-sitter-swift";
-      rev = "12bacf3ee30f6c39e7cfa6ca6625cac012589236";
-      hash = "sha256-2rhH2sbl2CQv3meOC+s3NNsJIfV2KKqzybH4p596gXU=";
+      rev = "ae604674719764ce26f18017afa4a98949077075";
+      hash = "sha256-yE/NWIwn3z058D3ZzyVgmDf0Nq7FMpB5ofuKtxdAqLQ=";
     };
     meta.homepage = "https://github.com/alex-pinkus/tree-sitter-swift";
     generate = true;
@@ -3483,12 +3483,12 @@
   tlaplus = buildGrammar {
     passthru.name = "tlaplus";
     language = "tlaplus";
-    version = "0.0.0+rev=8d749f9a598b47b7110c7340006c8eb8a9552566";
+    version = "0.0.0+rev=add40814fda369f6efd989977b2c498aaddde984";
     src = fetchFromGitHub {
       owner = "tlaplus-community";
       repo = "tree-sitter-tlaplus";
-      rev = "8d749f9a598b47b7110c7340006c8eb8a9552566";
-      hash = "sha256-BX2JXlrFoUiZIa8EWkbv16HWygIv3rccGacLproIc18=";
+      rev = "add40814fda369f6efd989977b2c498aaddde984";
+      hash = "sha256-nqbIpLHL2m+Mq6kI0hzVBrfyv5Xwdz+oeOFUslN5VsI=";
     };
     meta.homepage = "https://github.com/tlaplus-community/tree-sitter-tlaplus";
   };
@@ -3893,12 +3893,12 @@
   xresources = buildGrammar {
     passthru.name = "xresources";
     language = "xresources";
-    version = "0.0.0+rev=8ec70e2171025d09146afd2cce9712affe9ff3dd";
+    version = "0.0.0+rev=30c59f2f095910509a8379f5de71db3acfef15d6";
     src = fetchFromGitHub {
       owner = "ValdezFOmar";
       repo = "tree-sitter-xresources";
-      rev = "8ec70e2171025d09146afd2cce9712affe9ff3dd";
-      hash = "sha256-ZK1R+8LrrHMsw5T9O3xHuLamFETsjwyCifwBPquMQew=";
+      rev = "30c59f2f095910509a8379f5de71db3acfef15d6";
+      hash = "sha256-3JKqoQAwAPob0hiKCDCqtIvf8udfXxcuaUCo5jLyers=";
     };
     meta.homepage = "https://github.com/ValdezFOmar/tree-sitter-xresources";
   };
